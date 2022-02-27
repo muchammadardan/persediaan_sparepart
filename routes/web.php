@@ -36,6 +36,12 @@ Route::get('/about', function () {
         "title" => "About",
         "name" => "Muchammad Ardan",
         "email" => "muchammadardan@gmail.com"
-        
+
+    ]);
+});
+
+Route::get('/in_mekanik', function () {
+    return view('in_mekanik', [
+        "title" => "Mekanik"
     ]);
 });
