@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListrikController;
+use App\Http\Controllers\MekanikController;
+use App\Http\Controllers\SparepartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +44,22 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/in_mekanik', function () {
-    return view('in_mekanik', [
-        "title" => "Mekanik"
-    ]);
-});
+// tampil data mekanik
+Route::get('/data_mekanik', [MekanikController::class, 'index'])->name('data_mekanik');
+
+// tambah data
+Route::get('/add_mekanik', [MekanikController::class, 'add_mekanik'])->name('add_mekanik');
+Route::post('/in_mekanik', [MekanikController::class, 'in_mekanik'])->name('in_mekanik');
+
+// Edit data mekanik
+
+Route::get('/edit_mekanik/{id}', [MekanikController::class, 'edit_mekanik'])->name('edit_mekanik');
+Route::post('/up_mekanik/{id}', [MekanikController::class, 'up_mekanik'])->name('up_mekanik');
+
+// hapus data mekanik
+
+Route::get('/del_mekanik/{id}', [MekanikController::class,'del_mekanik'])->name('del_mekanik');
+
+
+// tampil data listrik
+Route::get('/electricity.listrik',[ListrikController::class, 'index'])->name('/electricity.listrik');

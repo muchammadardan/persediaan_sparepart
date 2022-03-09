@@ -6,7 +6,7 @@
         
         <div class="row justify-content-start">
             <div class="category col-4">
-                <a href="in_mekanik">
+                <a href="data_mekanik">
                 <div> <button type="button" class="btn ">
                         <img src="images/bearing.jpg" class="img-fluid " alt="Gambar Mekanik">
                         Mekanik
@@ -17,10 +17,10 @@
 
 
             <div class="category col-4">
-                <div><button type="button" class=" btn">
+                <div><a href="electricity.listrik" type="button" class=" btn">
                         <img src="images/relay.jpg" class="img-fluid" alt=" Gambar Mekanik">
                         Kelistrikan
-                    </button>
+                    </a>
                 </div>
             </div>
 
